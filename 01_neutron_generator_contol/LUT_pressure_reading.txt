@@ -1,0 +1,12 @@
+# Table: pressure lookup table in mbar, next row is columns
+# pressure_pfeiffer     pressure_BBox
+8.9e-6     2.02e-6
+6.1e-2     7.74e-2
+5.9e-2     6.90e-2
+5.8e-2     7.17e-2
+5.7e-2     7.17e-2
+5.4e-2     6.15e-2
+5.3e-2     6.64e-2
+5.0e-2     6.39e-2
+4.9e-2     6.15e-2
+3.4e-2     3.88e-2
