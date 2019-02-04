@@ -1,3 +1,4 @@
+test github
 01.setup_CPT.001
 
 bsub -n 8 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 01.setup_CPT.001.mph -outputfile 01.setup_CPT.001_out.mph"
