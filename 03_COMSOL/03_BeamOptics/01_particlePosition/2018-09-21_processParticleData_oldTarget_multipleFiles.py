@@ -41,13 +41,13 @@ def find_center_of_spot(y, x, qry_eval):
 # foldername = '03.new_chamber/09.extension_diameter'
 # foldername = '03.new_chamber/10.extension_length' # ADJUST DIST MAX FOR NUM ARRIVED dist_max
 # foldername = '03.new_chamber/11.extraction_offsets'
-foldername = '03.new_chamber/14.suppr_electrode'
-foldername = '02.current_chamber/01.setup_CPT'
+# foldername = '03.new_chamber/14.suppr_electrode'
+foldername = '02.current_chamber/02.MR/particleData/00D'
 # foldername = '13.nIter'
 # remote_path = '//fs03/LTH_Neutimag/hkromer/'
 # Local
 remote_path = f'/Users/hkromer/02_PhD/02_Data/01_COMSOL/\
-01_IonOptics/{foldername}/particleData/'
+01_IonOptics/{foldername}/'
 
 # remote_path = '/Users/hkromer/02_PhD/02_Data/01_COMSOL/01_IonOptics/\
 # 2018-10-23_comsol/particleData/'

@@ -13,12 +13,14 @@ from scipy.interpolate import interp1d
 # remote_path = '/Users/hkromer/02_PhD/02_Data/01_COMSOL/01_IonOptics/\
 # 03.new_chamber/07.mesh_refinement.right_alignment/meshRefinement/'
 remote_path = '/Users/hkromer/02_PhD/02_Data/01_COMSOL/01_IonOptics/\
-02.current_chamber/01.setup_CPT/lineData/'
+02.current_chamber/02.MR/lineData/00D'
 
 # files_along_x = '{}/02_Simulations/06_COMSOL/03_BeamOptics/01_OldTarget/\
 # IGUN_geometry\2018-09-19_comsolGeometry\mesh_refinement'.format(remote_path)
 
 files_along_x = f'{remote_path}'
+
+ylimit = 20
 
 # Do not forget to comment out the reference df!
 
@@ -89,7 +91,7 @@ def minMaxX(df):
 
 # comment one of them !
 # ref_df = df[ df['ID'] == '101_mr_0.5' ]   # new target
-ref_df = df[df['hmax'] == 1]  # old target
+ref_df = df[df['hmax'] == 2]
 
 E_ref_interp = interp1d(ref_df['x'], ref_df['ElField'],
 	fill_value='extrapolate')
@@ -99,7 +101,7 @@ E_ref_interp = interp1d(ref_df['x'], ref_df['ElField'],
 
 my_plots = []
 
-X = np.linspace(0, 95, 400)  # query points
+X = np.linspace(0, 72.9, 400)  # query points
 E_ref = E_ref_interp(X)
 
 f, ax = plt.subplots(figsize=(6, 8))
@@ -123,7 +125,7 @@ def plotDifferences(df):
 
 		this_plot1, = ax.plot(X, 100 * diff_E, label=lbl)
 		ax.set_xlabel('x position [mm]')
-		ax.set_ylim(0, 50)
+		ax.set_ylim(0, ylimit)
 		ax.set_ylabel('rel. diff. electric field [%]')
 		ax.grid(True)
 
@@ -173,7 +175,7 @@ def plotDifferences(df):
 
 		ax.plot(X, 100 * diff_E, label=lbl)
 		ax.set_xlabel('x position [mm]')
-		ax.set_ylim(0, 50)
+		ax.set_ylim(0, ylimit)
 		ax.set_ylabel('rel. diff. electric field [%]')
 		ax.grid(True)
 
@@ -185,7 +187,7 @@ df.groupby('ID').apply(lambda x: plotDifferences(x))
 handles, labels = ax.get_legend_handles_labels()
 # sort both labels and handles by labels
 labels, handles = zip(*sorted(zip(labels, handles), key=lambda t: t[0]))
-ax.legend(handles[0:], labels[0:], title='hmax')
+ax.legend(handles[1:], labels[1:], title='hmax')
 
 # plt.show()
 filename = '{}/mr_extraction_region'.format(files_along_x)
