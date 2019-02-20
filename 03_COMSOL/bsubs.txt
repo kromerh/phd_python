@@ -1,3 +1,11 @@
+07.sweep.003.002.mph
+
+bsub -n 12 -W 6:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.sweep.003.002.mph -outputfile 07.sweep.003.002_out.mph"
+
+09.suppr_electrode_ring.101.mph
+
+bsub -n 12 -W 4:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 09.suppr_electrode_ring.101.mph -outputfile 09.suppr_electrode_ring.101_out.mph"
+
 06.suppr_electrode.001.timestepping.mph
 
 bsub -n 12 -W 6:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 06.suppr_electrode.001.timestepping.mph -outputfile 06.suppr_electrode.001.timestepping_out.mph"
@@ -22,7 +30,7 @@ bsub -n 12 -W 2:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch
 
 07.sweep.003.001
 
-bsub -n 12 -W 6:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.sweep.003.001.mph -outputfile 07.sweep.003.001_out.mph"
+bsub -n 12 -W 2:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.sweep.003.001.mph -outputfile 07.sweep.003.001_out.mph"
 
 08.electrons.001.mph
 
