@@ -1,14 +1,45 @@
+02.sweeps.001.mph
+009
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.001.mph -outputfile 02.sweeps.001_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.002.mph -outputfile 02.sweeps.002_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.003.mph -outputfile 02.sweeps.003_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.004.mph -outputfile 02.sweeps.004_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.005.mph -outputfile 02.sweeps.005_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.006.mph -outputfile 02.sweeps.006_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.007.mph -outputfile 02.sweeps.007_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.008.mph -outputfile 02.sweeps.008_out.mph"
+
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.009.mph -outputfile 02.sweeps.009_out.mph"
+
+01.MR.001.mph
+
+bsub -n 12 -W 3:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 01.MR.000a.mph -outputfile 01.MR.000a_out.mph"
+
+bsub -n 12 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 01.MR.001.mph -outputfile 01.MR.001_out.mph"
+
+bsub -n 12 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 01.MR.002.mph -outputfile 01.MR.002_out.mph"
+
+bsub -n 12 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 01.MR.003.mph -outputfile 01.MR.003_out.mph"
+
 05.old_flange.005.mph
 
 bsub -n 12 -W 3:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.004.mph -outputfile 05.old_flange.004_out.mph"
 
-bsub -n 12 -W 3:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.005.mph -outputfile 05.old_flange.005_out.mph"
+bsub -n 12 -W 60:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.005a.mph -outputfile 05.old_flange.005a_out.mph"
 
-bsub -n 12 -W 3:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.006.mph -outputfile 05.old_flange.006_out.mph"
+bsub -n 12 -W 60:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.006a.mph -outputfile 05.old_flange.006a_out.mph"
 
 05.old_flange.002
 
-bsub -n 12 -W 3:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.002.mph -outputfile 05.old_flange.002_out.mph"
+bsub -n 12 -W 30:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.002a.mph -outputfile 05.old_flange.002a_out.mph"
 
 bsub -n 12 -W 3:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.old_flange.003.mph -outputfile 05.old_flange.003_out.mph"
 
