@@ -1,0 +1,15 @@
+# p = 300 W
+# r_beam = 2 mm
+# d_Cu = 3 mm
+# 3l/min water flowrate at 20 degC
+# rotational speed in rpm         maximum surface temperature in degC
+vrot_rpm	maxT_degC
+25	216.85
+100	171.39
+150	158.23
+180	152.40
+200	148.78
+300	134.60
+500	117.16
+750	104.61
+1000	96.739

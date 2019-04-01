@@ -1,0 +1,8 @@
+# Mesh refinement swept
+# 300W, 180 rpm, 0.05 kg/s, 3 mm Cu, 5 µm Ti
+Refinement factor	Maximum temperature [degC]		Number of elements
+0.5	    158.02		315000 
+0.75	143.10		472500 
+1.0		152.40		630000 
+1.25	147.66		787500 
+1.5		151.14		945000 

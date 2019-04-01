@@ -1,0 +1,10 @@
+﻿# Mesh refinement fluid
+# 300W, 180 rpm, 0.05 kg/s, 3 mm Cu, 5 µm Ti
+# Refinement factor	Maximum temperature [degC]		Number of elements
+ref_fac		maxT_degC	numEl
+0.5		150.77		378000 
+0.75	151.98		504000 
+1.0		152.4		630000 
+1.25	152.72		756000 
+1.5		152.86		882000 
+2.0	153.11		1134000

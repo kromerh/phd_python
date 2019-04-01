@@ -21,6 +21,20 @@ bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scrat
 
 bsub -n 48 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 48 -inputfile 04.suppr_elec.2D.001.mph -outputfile 04.suppr_elec.2D.001_out.mph"
 
+
+
+bsub -n 20 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 20 -inputfile 04.suppr_elec.2D.001.Vbias_500V.mph -outputfile 04.suppr_elec.2D.001.Vbias_500V_out.mph"
+
+bsub -n 20 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 20 -inputfile 04.suppr_elec.2D.001.Vbias_750V.mph -outputfile 04.suppr_elec.2D.001.Vbias_750V_out.mph"
+
+bsub -n 20 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 20 -inputfile 04.suppr_elec.2D.001.Vbias_1000V.mph -outputfile 04.suppr_elec.2D.001.Vbias_1000V_out.mph"
+
+bsub -n 20 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 20 -inputfile 04.suppr_elec.2D.001.Vbias_1250V.mph -outputfile 04.suppr_elec.2D.001.Vbias_1250V_out.mph"
+
+bsub -n 20 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 20 -inputfile 04.suppr_elec.2D.001.Vbias_1500V.mph -outputfile 04.suppr_elec.2D.001.Vbias_1500V_out.mph"
+
+
+
 bsub -n 20 -W 10:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 20 -inputfile 04.suppr_elec.2D.001.mph -outputfile 04.suppr_elec.2D.001_20_out.mph"
 
 
