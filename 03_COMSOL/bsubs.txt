@@ -1,3 +1,29 @@
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.002.mph -outputfile 04.suppr_elec.3D.002_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.003.mph -outputfile 04.suppr_elec.3D.003_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.004.mph -outputfile 04.suppr_elec.3D.004_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.005.mph -outputfile 04.suppr_elec.3D.005_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.006.mph -outputfile 04.suppr_elec.3D.006_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.007.mph -outputfile 04.suppr_elec.3D.007_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.008.mph -outputfile 04.suppr_elec.3D.008_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.009.mph -outputfile 04.suppr_elec.3D.009_out.mph"
+
+
+04.suppr_elec.3D.001.mph
+04.suppr_elec.3D.001.only_es.mph
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.001.mph -outputfile 04.suppr_elec.3D.001_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 04.suppr_elec.3D.001.only_es.mph -outputfile 04.suppr_elec.3D.001.only_es_out.mph"
+
 ----- license error 2019-03-28:
 
 bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile run40_keps_final_02_selectionLast.mph -outputfile run40_keps_final_02_selectionLast_out.mph"
