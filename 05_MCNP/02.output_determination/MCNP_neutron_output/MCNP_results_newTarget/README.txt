@@ -1,0 +1,1 @@
+The file df_neutron_output_for_Edeut_XX.csv, where XX is the deuterium ion energy, contains the neutron output per 100 µSv/hr as computed by the MCNP model. The first column is the distance between the LB6411 and the neutron source in cm, and N S W E corresponds to the direction in which the LB6411 is placed.
