@@ -230,7 +230,7 @@ def utc_to_local_time(utc):
 
     # Convert time zone
     my_time = utc.astimezone(to_zone)
-return my_time
+    return my_time
 
 def main():
     start = time.time()
