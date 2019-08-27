@@ -3,6 +3,7 @@
 - sudo apt-get install python-pip libglib2.0-dev
 - sudo pip install bluepy
 - python3 -m pip install bluepy
+- python3 -m pip install dateutils
 
 - Bluetooth address: C5:BB:A6:86:0E:64 Smart Humigadget
 - https://www.elinux.org/RPi_Bluetooth_LE

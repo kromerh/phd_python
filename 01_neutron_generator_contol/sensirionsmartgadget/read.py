@@ -246,8 +246,8 @@ def main():
     # print('NewestTimeStampMs [µs]:', gadget.readNewestTimestampMs(), datetime.utcfromtimestamp(gadget.readNewestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
 
     gadget.readLoggedDataInterval()
-#     gadget.setTemperatureNotification(True) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
-    gadget.setHumidityNotification(True) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
+    gadget.setTemperatureNotification(False) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
+    gadget.setHumidityNotification(False) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
 
     try:
         while True:
@@ -258,6 +258,7 @@ def main():
     finally:
         data = gadget.loggedDataReadout # contains the data logged by the smartgadget
         data = pd.DataFrame(data)
+        data.reset_index(inplace=True)
         # METHOD 1: Hardcode zones:
         from_zone = tz.gettz('UTC')
         to_zone = tz.tzlocal()
