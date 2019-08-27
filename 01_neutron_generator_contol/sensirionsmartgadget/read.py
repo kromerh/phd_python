@@ -257,8 +257,8 @@ def main():
     # print('LoggerInterval [ms]: ', gadget.readLoggerIntervalMs())
     # gadget.setSyncTimeMs()
     # time.sleep(0.1) # Sleep a bit to enable the gadget to set the SyncTime; otherwise 0 is read when readNewestTimestampMs is used
-    # print('OldestTimestampMs [µs]:', gadget.readOldestTimestampMs(), datetime.utcfromtimestamp(gadget.readOldestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
-    # print('NewestTimeStampMs [µs]:', gadget.readNewestTimestampMs(), datetime.utcfromtimestamp(gadget.readNewestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
+    print('OldestTimestampMs [µs]:', gadget.readOldestTimestampMs(), datetime.utcfromtimestamp(gadget.readOldestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
+    print('NewestTimeStampMs [µs]:', gadget.readNewestTimestampMs(), datetime.utcfromtimestamp(gadget.readNewestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
 
     gadget.readLoggedDataInterval()
     gadget.setTemperatureNotification(True) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
@@ -275,7 +275,7 @@ def main():
         data = pd.DataFrame(data)
         data.reset_index(inplace=True)
         data.rename(columns={"index": "utc_time"}, inplace=True)
-        data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
+        # data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
         print(data.head())
         # print(gadget.loggedData) # contains the data sent via notifications
         gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
