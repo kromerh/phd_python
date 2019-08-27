@@ -255,8 +255,8 @@ def main():
     # print('Humidity [%]:', '{:.2f}'.format(gadget.readHumidity()))
 
     # print('LoggerInterval [ms]: ', gadget.readLoggerIntervalMs())
-    # gadget.setSyncTimeMs()
-    # time.sleep(0.1) # Sleep a bit to enable the gadget to set the SyncTime; otherwise 0 is read when readNewestTimestampMs is used
+    gadget.setSyncTimeMs()
+    time.sleep(0.1) # Sleep a bit to enable the gadget to set the SyncTime; otherwise 0 is read when readNewestTimestampMs is used
     print('OldestTimestampMs [µs]:', gadget.readOldestTimestampMs(), datetime.utcfromtimestamp(gadget.readOldestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
     print('NewestTimeStampMs [µs]:', gadget.readNewestTimestampMs(), datetime.utcfromtimestamp(gadget.readNewestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
 
