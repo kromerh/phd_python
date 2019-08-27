@@ -251,7 +251,7 @@ def main():
             if False is gadget.waitForNotifications(5) or False is gadget.isLogReadoutInProgress():
                 print('Done reading data')
                 break
-            print('Read dataset')
+            # print('Read dataset')
     finally:
         print(gadget.loggedDataReadout) # contains the data logged by the smartgadget
         # print(gadget.loggedData) # contains the data sent via notifications
