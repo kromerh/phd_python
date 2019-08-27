@@ -216,7 +216,21 @@ class SHT31():
     def readSoftwareRevisionString(self):
         return self.__readCharacteristcAscii('SoftwareRevisionString')
 
+def utc_to_local_time(utc):
+    # METHOD 1: Hardcode zones:
+    from_zone = tz.gettz('UTC')
+    to_zone = tz.tzlocal()
 
+    # utc = datetime.utcnow()
+    # utc = datetime.strptime('2011-01-21 02:37:21', '%Y-%m-%d %H:%M:%S')
+
+    # Tell the datetime object that it's in UTC time zone since
+    # datetime objects are 'naive' by default
+    utc = utc.replace(tzinfo=from_zone)
+
+    # Convert time zone
+    my_time = utc.astimezone(to_zone)
+return my_time
 
 def main():
     start = time.time()
@@ -259,19 +273,8 @@ def main():
         data = gadget.loggedDataReadout # contains the data logged by the smartgadget
         data = pd.DataFrame(data)
         data.reset_index(inplace=True)
-        # METHOD 1: Hardcode zones:
-        from_zone = tz.gettz('UTC')
-        to_zone = tz.tzlocal()
-
-        # utc = datetime.utcnow()
-        utc = datetime.strptime('2011-01-21 02:37:21', '%Y-%m-%d %H:%M:%S')
-
-        # Tell the datetime object that it's in UTC time zone since
-        # datetime objects are 'naive' by default
-        utc = utc.replace(tzinfo=from_zone)
-
-        # Convert time zone
-        my_tz = utc.astimezone(to_zone)
+        data.rename(columns={"index": "utc_time"}, inplace=True)
+        data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
         print(data.head())
         # print(gadget.loggedData) # contains the data sent via notifications
         gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
