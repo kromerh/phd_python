@@ -234,7 +234,7 @@ def main():
     print('Battery level [%]:', gadget.readBattery())
     print('Temperature [°C]:', '{:.2f}'.format(gadget.readTemperature()))
     print('Humidity [%]:', '{:.2f}'.format(gadget.readHumidity()))
-    gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
+
     print('LoggerInterval [ms]: ', gadget.readLoggerIntervalMs())
     gadget.setSyncTimeMs()
     time.sleep(0.1) # Sleep a bit to enable the gadget to set the SyncTime; otherwise 0 is read when readNewestTimestampMs is used
@@ -254,6 +254,7 @@ def main():
     finally:
         print(gadget.loggedDataReadout) # contains the data logged by the smartgadget
         # print(gadget.loggedData) # contains the data sent via notifications
+        gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
         gadget.disconnect()
         print(len(gadget.loggedDataReadout['Temp']), len(gadget.loggedDataReadout['Humi']))
         print('Disconnected')
