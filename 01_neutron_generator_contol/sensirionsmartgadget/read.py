@@ -218,7 +218,7 @@ class SHT31():
 def main():
     bleAddress = 'C5:BB:A6:86:0E:64'
     print('Connecting to:', bleAddress)
-    gadget = pySmartGadget.SHT31(bleAddress)
+    gadget = SHT31(bleAddress)
     print('Connected')
 
     print('Device name:', gadget.readDeviceName())
