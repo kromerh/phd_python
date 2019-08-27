@@ -219,14 +219,14 @@ class SHT31():
 def utc_to_local_time(timestamp):
     # METHOD 1: Hardcode zones:
     from_zone = tz.gettz('UTC')
-    to_zone = tz.tzlocal()
+    to_zone = tz.gettz('Europe/Zurich')
 
     # utc = datetime.utcnow()
     # utc = datetime.strptime('2011-01-21 02:37:21', '%Y-%m-%d %H:%M:%S')
 
     # Tell the datetime object that it's in UTC time zone since
     # datetime objects are 'naive' by default
-    utc = datetime.utcfromtimestamp(timestamp)
+    utc = datetime.utcfromtimestamp(timestamp/1000)
     utc = utc.replace(tzinfo=from_zone)
 
     # Convert time zone
@@ -275,7 +275,7 @@ def main():
         data = pd.DataFrame(data)
         data.reset_index(inplace=True)
         data.rename(columns={"index": "utc_time"}, inplace=True)
-        # data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
+        data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
         print(data.tail())
         # print(gadget.loggedData) # contains the data sent via notifications
         gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
