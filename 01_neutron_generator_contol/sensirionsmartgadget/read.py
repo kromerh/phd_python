@@ -246,8 +246,8 @@ def main():
     # print('NewestTimeStampMs [µs]:', gadget.readNewestTimestampMs(), datetime.utcfromtimestamp(gadget.readNewestTimestampMs()/1000).strftime('%Y-%m-%d %H:%M:%S'))
 
     gadget.readLoggedDataInterval()
-    gadget.setTemperatureNotification(False) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
-    gadget.setHumidityNotification(False) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
+    gadget.setTemperatureNotification(True) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
+    gadget.setHumidityNotification(True) # enable notifications for humidity values; the object will log incoming data into the loggedData variable
 
     try:
         while True:
