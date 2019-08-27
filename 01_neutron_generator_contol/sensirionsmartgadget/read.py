@@ -2,6 +2,9 @@ from datetime import datetime
 import time
 from bluepy.btle import UUID, Peripheral, DefaultDelegate
 import struct
+from datetime import datetime
+from dateutil import tz
+import pandas as pd
 
 
 class SHT31Delegate(DefaultDelegate):
@@ -253,7 +256,22 @@ def main():
                 break
             # print('Read dataset')
     finally:
-        print(gadget.loggedDataReadout) # contains the data logged by the smartgadget
+        data = gadget.loggedDataReadout # contains the data logged by the smartgadget
+        data = pd.DataFrame(data)
+        # METHOD 1: Hardcode zones:
+        from_zone = tz.gettz('UTC')
+        to_zone = tz.tzlocal()
+
+        # utc = datetime.utcnow()
+        utc = datetime.strptime('2011-01-21 02:37:21', '%Y-%m-%d %H:%M:%S')
+
+        # Tell the datetime object that it's in UTC time zone since
+        # datetime objects are 'naive' by default
+        utc = utc.replace(tzinfo=from_zone)
+
+        # Convert time zone
+        my_tz = utc.astimezone(to_zone)
+        print(data.head())
         # print(gadget.loggedData) # contains the data sent via notifications
         gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
         gadget.disconnect()
