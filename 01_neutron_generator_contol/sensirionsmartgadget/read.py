@@ -216,7 +216,7 @@ class SHT31():
     def readSoftwareRevisionString(self):
         return self.__readCharacteristcAscii('SoftwareRevisionString')
 
-def utc_to_local_time(utc):
+def utc_to_local_time(timestamp):
     # METHOD 1: Hardcode zones:
     from_zone = tz.gettz('UTC')
     to_zone = tz.tzlocal()
@@ -226,6 +226,7 @@ def utc_to_local_time(utc):
 
     # Tell the datetime object that it's in UTC time zone since
     # datetime objects are 'naive' by default
+    utc = datetime.utcfromtimestamp(timestamp)
     utc = utc.replace(tzinfo=from_zone)
 
     # Convert time zone
