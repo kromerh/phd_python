@@ -13,3 +13,6 @@
 - TEMP_NOTI_UUID = '00002235-b38d-4985-720e-0f993a68ee41'
 - HUMI_NOTI_UUID = '00001235-b38d-4985-720e-0f993a68ee41'
 - char-read-uuid 00002235-b38d-4985-720e-0f993a68ee41
+
+
+- code taken from: https://github.com/Mailblocker/pySmartGadget/blob/master/pySmartGadget/pySmartGadget.py

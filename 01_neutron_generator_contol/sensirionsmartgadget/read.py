@@ -255,7 +255,7 @@ def main():
         print(gadget.loggedDataReadout) # contains the data logged by the smartgadget
         # print(gadget.loggedData) # contains the data sent via notifications
         gadget.disconnect()
-        print(len(gadget.loggedDataReadout))
+        print(len(gadget.loggedDataReadout['Temp']), len(gadget.loggedDataReadout['Humi']))
         print('Disconnected')
 
 if __name__ == "__main__":
