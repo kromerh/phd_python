@@ -216,6 +216,7 @@ class SHT31():
 
 
 def main():
+    start = time.time()
     bleAddress = 'C5:BB:A6:86:0E:64'
     print('Connecting to:', bleAddress)
     gadget = SHT31(bleAddress)
@@ -258,6 +259,8 @@ def main():
         gadget.disconnect()
         print(len(gadget.loggedDataReadout['Temp']), len(gadget.loggedDataReadout['Humi']))
         print('Disconnected')
+        end = time.time()
+        print(end - start)
 
 if __name__ == "__main__":
     main()
