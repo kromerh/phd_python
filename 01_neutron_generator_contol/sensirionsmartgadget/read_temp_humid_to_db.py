@@ -6,7 +6,6 @@ from datetime import datetime
 from dateutil import tz
 import pandas as pd
 import sqlalchemy as sql
-import datetime
 import pymysql
 
 host="twofast-rpi3-0"  # your host
