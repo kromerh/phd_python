@@ -170,6 +170,15 @@ CREATE TABLE data_referenceDetectors (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 
 
 
+*****************************************
+temp_humid_sensor
+*****************************************
+- ID
+- time
+- temp
+- humid
+
+CREATE TABLE temp_humid_sensor (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, time TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP, temp FLOAT NOT NULL, humid FLOAT NOT NULL);
 
 
 
