@@ -296,7 +296,7 @@ def main():
         end = time.time()
         print(end - start)
         # select only relevant
-        data.to_sql('temp_humid_sensor', con=sql_engine, if_exists='append')
+        data.to_sql('temp_humid_sensor', con=sql_engine, if_exists='append', index=False)
 
 if __name__ == "__main__":
     main()
