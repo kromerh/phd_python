@@ -5,8 +5,16 @@ import struct
 from datetime import datetime
 from dateutil import tz
 import pandas as pd
+import sqlalchemy as sql
+import datetime
 import pymysql
-import sqlalchemy
+
+host="twofast-rpi3-0"  # your host
+user='reader' # username
+pw='heiko'  # password
+db="NG_twofast_DB" # name of the database
+connect_string = 'mysql+pymysql://%(user)s:%(pw)s@%(host)s:3306/%(db)s'% {"user": user, "pw": pw, "host": host, "db": db}
+sql_engine = sql.create_engine(connect_string)
 
 class SHT31Delegate(DefaultDelegate):
     def __init__(self, parent):
@@ -275,7 +283,7 @@ def main():
         data = gadget.loggedDataReadout # contains the data logged by the smartgadget
         data = pd.DataFrame(data)
         data.reset_index(inplace=True)
-        data.rename(columns={"index": "utc_time"}, inplace=True)
+        data.rename(columns={"index": "utc_time", 'Temp': 'temp', 'Humi': 'humid'}, inplace=True)
         data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
         print(data.tail())
         # print(gadget.loggedData) # contains the data sent via notifications
@@ -285,6 +293,9 @@ def main():
         print('Disconnected')
         end = time.time()
         print(end - start)
+        # select only relevant
+        data = data[['time', 'temp', 'humid']]
+        data.to_sql('temp_humid_sensor', con=sql_engine, if_exists='append')
 
 if __name__ == "__main__":
     main()
