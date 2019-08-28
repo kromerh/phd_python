@@ -284,6 +284,7 @@ def main():
         data.reset_index(inplace=True)
         data.rename(columns={"index": "utc_time", 'Temp': 'temp', 'Humi': 'humid'}, inplace=True)
         data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
+        data = data[['time', 'temp', 'humid']]
         print(data.tail())
         # print(gadget.loggedData) # contains the data sent via notifications
         gadget.setLoggerIntervalMs(1000) # setting a new logger interval will clear all the logged data on the device
@@ -293,7 +294,6 @@ def main():
         end = time.time()
         print(end - start)
         # select only relevant
-        data = data[['time', 'temp', 'humid']]
         data.to_sql('temp_humid_sensor', con=sql_engine, if_exists='append')
 
 if __name__ == "__main__":
