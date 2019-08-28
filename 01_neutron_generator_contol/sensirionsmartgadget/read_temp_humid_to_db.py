@@ -5,7 +5,8 @@ import struct
 from datetime import datetime
 from dateutil import tz
 import pandas as pd
-import
+import pymysql
+import sqlalchemy
 
 class SHT31Delegate(DefaultDelegate):
     def __init__(self, parent):
