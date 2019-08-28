@@ -299,7 +299,7 @@ def main():
             # print(end - start)
             # select only relevant
             data.to_sql('temp_humid_sensor', con=sql_engine, if_exists='append', index=False)
-        time.sleep(1)
+        time.sleep(5)
 
 if __name__ == "__main__":
     main()
