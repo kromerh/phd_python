@@ -284,6 +284,7 @@ def main():
         data.reset_index(inplace=True)
         data.rename(columns={"index": "utc_time", 'Temp': 'temp', 'Humi': 'humid'}, inplace=True)
         data['time'] = data['utc_time'].apply(lambda x: utc_to_local_time(x))
+        data['time'] = data['time'].astype(pd.Timestamp)
         data = data[['time', 'temp', 'humid']]
         print(data.tail())
         # print(gadget.loggedData) # contains the data sent via notifications
