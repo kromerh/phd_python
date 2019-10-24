@@ -1,3 +1,7 @@
+bsub -n 16 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=4000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 16 -inputfile 02.MR.102.temporal_refinement.004_probe.mph -outputfile 02.MR.102.temporal_refinement.004_probe_out.mph"
+
+
+
 05.electrons.001.mph
 
 bsub -n 12 -W 12:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.electrons.004.mph -outputfile 05.electrons.004_out.mph"
