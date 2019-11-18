@@ -1,4 +1,26 @@
-bsub -n 16 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=4000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 16 -inputfile 02.MR.102.temporal_refinement.004_probe.mph -outputfile 02.MR.102.temporal_refinement.004_probe_out.mph"
+02.MR.102.temporal_refinement.003.hmesh_save1e8.002.mph
+
+
+bsub -n 12 -W 16:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=1000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 02.MR.102.temporal_refinement.003.hmesh_save1e8.002.mph -outputfile 02.MR.102.temporal_refinement.003.hmesh_save1e8.002_out.mph"
+
+bsub -n 12 -W 16:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=1000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 02.MR.102.temporal_refinement.003.hmesh_save1e8.003.mph -outputfile 02.MR.102.temporal_refinement.003.hmesh_save1e8.003_out.mph"
+
+bsub -n 12 -W 16:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 02.MR.102.temporal_refinement.003.hmesh_save1e8.004.mph -outputfile 02.MR.102.temporal_refinement.003.hmesh_save1e8.004_out.mph"
+
+
+
+02.MR.102.temporal_refinement.save_1e8.004.mph
+02.MR.102.temporal_refinement.save_1e8.003
+02.MR.102.temporal_refinement.save_1e8.002
+02.MR.102.temporal_refinement.save_1e8.001
+
+bsub -n 16 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=4000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 16 -inputfile 02.MR.102.temporal_refinement.save_1e8.004.mph -outputfile 02.MR.102.temporal_refinement.save_1e8.004_out.mph"
+
+bsub -n 16 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=4000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 16 -inputfile 02.MR.102.temporal_refinement.save_1e8.003.mph -outputfile 02.MR.102.temporal_refinement.save_1e8.003_out.mph"
+
+bsub -n 16 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=4000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 16 -inputfile 02.MR.102.temporal_refinement.save_1e8.002.mph -outputfile 02.MR.102.temporal_refinement.save_1e8.002_out.mph"
+
+bsub -n 16 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=4000, scratch=5000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 16 -inputfile 02.MR.102.temporal_refinement.save_1e8.001.mph -outputfile 02.MR.102.temporal_refinement.save_1e8.001_out.mph"
 
 
 
