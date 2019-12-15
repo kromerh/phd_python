@@ -11,7 +11,7 @@ try:
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     client.load_system_host_keys()
     client.connect(host, username=user, password=pwd)
-    stdin, stdout, stderr = client.exec_command('/home/pi/Documents/run_flow_meter_readout.sh', get_pty=True)
+    stdin, stdout, stderr = client.exec_command('/home/pi/run_flow_meter_readout.sh', get_pty=True)
     print(stdout.readlines())
     print(stderr.read())
     client.close()
