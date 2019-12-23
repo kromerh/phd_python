@@ -1,0 +1,33 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.io as sio
+
+class SVHNDataset():
+    
+    def load_dataset(self, path_train, path_test):
+        """
+        Loads the .mat file from the SVHN Dataset (train and test) indicated at location path. Returns it as numpy array,
+        """
+        train_dataset = sio.loadmat(path_train)
+        test_dataset = sio.loadmat(path_test)
+
+        train_data, train_labels = train_dataset['X'], train_dataset['y']
+        test_data, test_labels = test_dataset['X'], test_dataset['y']
+
+        print( 'Train data:', train_data.shape,', Train labels:', train_labels.shape )
+        print( 'Test data:', test_data.shape,', Test labels:', test_labels.shape )
+        
+        return train_data, train_labels, test_data, test_labels
+    
+    def convert_to_gray(self, data):
+        """
+        Converts all the images in the dataset into gray scale. Returns the dataset with grayscale entries.
+        """
+        
+        r, g, b = data[:,:,0,:], data[:,:,1,:], data[:,:,2,:]
+        gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
+        data[:,:,0,:] = gray
+        data = data[:,:,0,:]
+        
+        return data
+        
