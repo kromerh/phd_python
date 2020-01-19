@@ -94,3 +94,15 @@ class SVHNDataset():
 
         # get a summary of our built model
         return model
+
+    def load_model(self,path):
+        """
+        Loads a pre-trained keras model at the path. Returns the model.
+        """
+        import tensorflow as tf
+        import os
+        os.environ['KMP_DUPLICATE_LIB_OK']='True' # otherwise there will be an error
+
+        model = tf.keras.models.load_model(path)
+
+        return model
