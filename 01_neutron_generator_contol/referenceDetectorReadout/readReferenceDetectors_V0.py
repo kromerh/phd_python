@@ -88,7 +88,7 @@ while True:
         serialArduino = serial_open(arduinoPort)
         ardRead = pi_read(serialArduino)
         s = ardRead.rstrip().split()
-        #print(s)
+        print(s)
         # ard_time, ct1, ct2, ct3, ct4
         # ard_time is the time read by the arduino, ctX are countrates in detector X until that time interval
         if len(s) == 6:
