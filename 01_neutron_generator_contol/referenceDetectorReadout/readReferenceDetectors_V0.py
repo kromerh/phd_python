@@ -91,12 +91,12 @@ while True:
         print(s)
         # ard_time, ct1, ct2, ct3, ct4
         # ard_time is the time read by the arduino, ctX are countrates in detector X until that time interval
-        if len(s) == 6:
+        if len(s) == 7:
             ard_time = s[1]
-            counts_D1 = s[2]
-            counts_D2 = s[3]
-            counts_D3 = s[4]
-            counts_D4 = s[5]
+            counts_D1 = s[3]
+            counts_D2 = s[4]
+            counts_D3 = s[5]
+            counts_D4 = s[6]
 
             print(ard_time, counts_D1, counts_D2, counts_D3, counts_D4)
             if float(ard_time) >= 30000.0:
