@@ -2,11 +2,11 @@ import serial
 import serial.tools.list_ports
 import re
 import sys
-import mysql.connector
+import pymysql
 from time import sleep
 
-db = mysql.connector.connect(host="twofast-RPi3-0",  # your host
-                     user="doseReader",  # username
+db = pymysql.connect(host="twofast-RPi3-0",  # your host
+                     user="writer",  # username
                      passwd="heiko",  # password
                      db="NG_twofast_DB")  # name of the database
 
