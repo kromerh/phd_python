@@ -1,3 +1,73 @@
+07.final_design.suppression_electrode.extraction_distance.01.mph
+07.final_design.suppression_electrode.extraction_distance.02.mph
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.extraction_distance.01.mph -outputfile 07.final_design.suppression_electrode.extraction_distance.01_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.extraction_distance.02.mph -outputfile 07.final_design.suppression_electrode.extraction_distance.02_out.mph"
+
+
+
+07.final_design.suppression_electrode.extraction_voltage.01.mph
+07.final_design.suppression_electrode.extraction_voltage.02.mph
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.extraction_voltage.01.mph -outputfile 07.final_design.suppression_electrode.extraction_voltage.01_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.extraction_voltage.02.mph -outputfile 07.final_design.suppression_electrode.extraction_voltage.02_out.mph"
+
+
+
+
+
+07.final_design.suppression_electrode.HV.01.mph
+07.final_design.suppression_electrode.HV.02.mph
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.HV.01.mph -outputfile 07.final_design.suppression_electrode.HV.01_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.HV.02.mph -outputfile 07.final_design.suppression_electrode.HV.02_out.mph"
+
+
+07.final_design.suppression_electrode.setup_onlyES.mph
+
+bsub -n 12 -W 4:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.setup_onlyES.mph -outputfile 07.final_design.suppression_electrode.setup_onlyES_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.suppression_electrode.setup.mph -outputfile 07.final_design.suppression_electrode.setup_out.mph"
+
+
+
+05.electrons.009.0.05eV.extraction_0V.hemisphere.mph
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 05.electrons.009.0.05eV.extraction_0V.hemisphere.mph -outputfile 05.electrons.009.0.05eV.extraction_0V.hemisphere_out.mph"
+
+
+
+05.electrons.009.0.05eV.extraction_0V.mph
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.010.extr_voltage.mph -outputfile 02.sweeps.target_pos.010.extr_voltage_out.mph"
+
+
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.010.extr_distances_01.mph -outputfile 02.sweeps.target_pos.010.extr_distances_01_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.010.extr_distances_02.mph -outputfile 02.sweeps.target_pos.010.extr_distances_02_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.010.mph -outputfile 02.sweeps.target_pos.010_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.011.mph -outputfile 02.sweeps.target_pos.011_out.mph"
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.012.mph -outputfile 02.sweeps.target_pos.012_out.mph"
+
+
+
+
+
+
 02.MR.102.temporal_refinement.003.hmesh_save1e8.002.mph
 
 
