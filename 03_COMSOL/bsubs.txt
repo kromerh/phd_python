@@ -1,3 +1,69 @@
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION.electrons.1e10.mph
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION.electrons.1e11.mph
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION.electrons.mph
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.2mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.2mA_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA_out.mph"
+
+
+
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.2mA
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.2mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.2mA_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA_out.mph"
+
+
+
+
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION_01.mph
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION_02.mph
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION_01.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION_01_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION_02.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.WITHEXTRACTION_02_out.mph"
+
+
+
+
+
+
+02.sweeps.target_pos.010.extr_voltage.0.2mA.mph
+02.sweeps.target_pos.010.extr_voltage.0.5mA.mph
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.010.extr_voltage.0.2mA.mph -outputfile 02.sweeps.target_pos.010.extr_voltage.0.2mA_out.mph"
+
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 02.sweeps.target_pos.010.extr_voltage.0.5mA.mph -outputfile 02.sweeps.target_pos.010.extr_voltage.0.5mA_out.mph"
+
+
+
+
+
+
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA.mph
+07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA.mph
+
+
+bsub -n 12 -W 5:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA_out.mph"
+
+bsub -n 12 -W 5:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=5000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.1mA_out.mph"
+
 07.final_design.no_extraction.mockup.130kV.0.2mesh.ignore_edges
 07.final_design.no_extraction.mockup.60kV.0.2mesh.ignore_edges
 
