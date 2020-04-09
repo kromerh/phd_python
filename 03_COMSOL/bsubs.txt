@@ -1,3 +1,78 @@
+lowRe_newCOMSOL_0.001step_RERUN.mph
+lowRe_newCOMSOL_0.001step_RERUN.mph.lock
+run40_lowRe_final_02_RERUN.mph
+run40_lowRe_final_02_RERUN.mph.lock
+
+07.final_design.no_extraction.4mmFillet.100kV.0.2.50kParticlesmesh.mph
+
+bsub -n 12 -W 12:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 5e6particles.mph -outputfile 5e6particles_out.mph"
+
+
+bsub -n 12 -W 2:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.onlyES_12.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.onlyES_12_out.mph"
+
+bsub -n 12 -W 2:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 07.final_design.no_extraction.4mmFillet.130kV.onlyES_12.mph -outputfile 07.final_design.no_extraction.4mmFillet.130kV.onlyES_12_out.mph"
+
+07.final_design.no_extraction.4mmFillet.100kV.onlyES_12.mph
+07.final_design.no_extraction.4mmFillet.100kV.onlyES_14.mph
+07.final_design.no_extraction.4mmFillet.130kV.onlyES_12.mph
+07.final_design.no_extraction.4mmFillet.130kV.onlyES_14.mph
+
+
+
+bsub -n 12 -W 2:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.onlyES_14.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.onlyES_14_out.mph"
+
+
+
+bsub -n 12 -W 2:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 07.final_design.no_extraction.4mmFillet.130kV.onlyES_14.mph -outputfile 07.final_design.no_extraction.4mmFillet.130kV.onlyES_14_out.mph"
+
+
+
+
+07.final_design.no_extraction.4mmFillet.100kV.onlyES
+
+bsub -n 12 -W 12:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=2000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.onlyES.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.onlyES_out.mph"
+
+
+07.final_design.no_extraction.4mmFillet.100kV.0.2.50kParticlesmesh.mph
+
+bsub -n 12 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2.50kParticlesmesh.mph -outputfile 07.final_design.no_extraction.4mmFillet.100kV.0.2.50kParticlesmesh_out.mph"
+
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lam.003.mph -outputfile 01.MR.lam.003_out.np8.mph"
+
+bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 01.MR.lam.003.mph -outputfile 01.MR.lam.003_out.np12.mph"
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=12000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lam.003.mph -outputfile 01.MR.lam.003_out.np8.12GB.mph"
+
+01.MR.lowRe.0.33kgps.mesh1
+01.MR.lowRe.0.33kgps.mesh2
+01.MR.lowRe.0.33kgps.mesh3
+
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lowRe.0.33kgps.mesh1.mph -outputfile 01.MR.lowRe.0.33kgps.mesh1_out.np8.mph"
+
+bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 01.MR.lowRe.0.33kgps.mesh1.mph -outputfile 01.MR.lowRe.0.33kgps.mesh1_out.np12.mph"
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=12000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lowRe.0.33kgps.mesh1.mph -outputfile 01.MR.lowRe.0.33kgps.mesh1_out.np8.12GB.mph"
+
+
+
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lowRe.0.33kgps.mesh2.mph -outputfile 01.MR.lowRe.0.33kgps.mesh2_out.np8.mph"
+
+bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 01.MR.lowRe.0.33kgps.mesh2.mph -outputfile 01.MR.lowRe.0.33kgps.mesh2_out.np12.mph"
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=12000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lowRe.0.33kgps.mesh2.mph -outputfile 01.MR.lowRe.0.33kgps.mesh2_out.np8.12GB.mph"
+
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lowRe.0.33kgps.mesh3.mph -outputfile 01.MR.lowRe.0.33kgps.mesh3_out.np8.mph"
+
+bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile 01.MR.lowRe.0.33kgps.mesh3.mph -outputfile 01.MR.lowRe.0.33kgps.mesh3_out.np12.mph"
+
+bsub -n 8 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=12000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 8 -inputfile 01.MR.lowRe.0.33kgps.mesh3.mph -outputfile 01.MR.lowRe.0.33kgps.mesh3_out.np8.12GB.mph"
+
+
+
 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA.V_bias_02
 07.final_design.no_extraction.4mmFillet.100kV.0.2mesh.refined.0.5mA.V_bias_01
 
