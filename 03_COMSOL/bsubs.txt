@@ -1,7 +1,15 @@
 lowRe_newCOMSOL_0.001step_RERUN.mph
-lowRe_newCOMSOL_0.001step_RERUN.mph.lock
 run40_lowRe_final_02_RERUN.mph
-run40_lowRe_final_02_RERUN.mph.lock
+
+
+bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile lowRe_newCOMSOL_0.001step_RERUN.mph -outputfile lowRe_newCOMSOL_0.001step_RERUN_out.np12.mph"
+
+bsub -n 12 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 12 -inputfile run40_lowRe_final_02_RERUN.mph -outputfile run40_lowRe_final_02_RERUN_out.np12.mph"
+
+bsub -n 48 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 48 -inputfile lowRe_newCOMSOL_0.001step_RERUN.mph -outputfile lowRe_newCOMSOL_0.001step_RERUN_out.np48.mph"
+
+bsub -n 48 -W 120:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=10000, scratch=20000]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 48 -inputfile run40_lowRe_final_02_RERUN.mph -outputfile run40_lowRe_final_02_RERUN_out.np48.mph"
+
 
 07.final_design.no_extraction.4mmFillet.100kV.0.2.50kParticlesmesh.mph
 
