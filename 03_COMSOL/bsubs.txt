@@ -8,25 +8,33 @@
 2mA.mph
 
 
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.1.mph -outputfile 0.1_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.05.mph -outputfile 0.05_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.25.mph -outputfile 0.25_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.5.mph -outputfile 0.5_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.75.mph -outputfile 0.75_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 10.mph -outputfile 10_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 1.mph -outputfile 1_out.mph"
-
-bsub -n 20 -W 24:00 -B -N -u kromerh@student.ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 2.mph -outputfile 2_out.mph"
 
 
 
 
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 1mA.mph -outputfile 1_out.mph"
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 2mA.mph -outputfile 2_out.mph"
+
+
+
+
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.75mA.mph -outputfile 0.75_out.mph"
+
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 10mA.mph -outputfile 10_out.mph"
+
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.5mA.mph -outputfile 0.5_out.mph"
+
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.1mA.mph -outputfile 0.1_out.mph"
+
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.05mA.mph -outputfile 0.05_out.mph"
+
+bsub -n 20 -W 24:00 -B -N -u kromerh@ethz.ch -R "rusage[mem=3000, scratch=7500]" "comsol batch -tmpdir \$TMPDIR -configuration \$TMPDIR -data \$TMPDIR -autosave off -np 4 -inputfile 0.25mA.mph -outputfile 0.25_out.mph"
 
 
 
