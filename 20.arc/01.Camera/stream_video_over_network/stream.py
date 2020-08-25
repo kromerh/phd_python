@@ -89,7 +89,7 @@ with picamera.PiCamera(framerate=24) as camera:
     camera.exposure_mode = 'auto'
     camera.ISO = 200
     camera.exposure_compensation = 25
-    camera.awb_mode = '0'
+    camera.awb_mode = 0
     camera.start_recording(output, format='mjpeg')
     try:
         address = ('', 8000)
