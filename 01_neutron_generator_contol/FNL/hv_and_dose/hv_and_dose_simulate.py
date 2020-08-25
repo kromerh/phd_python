@@ -19,8 +19,8 @@ FREQUENCY = 1 # sleep time in second
 
 
 # values to save
-HV_VOLTAGE = 3 # V
-HV_CURRENT = 0.5 # V
+HV_VOLTAGE = 3.2 # V
+HV_CURRENT = 0.9 # V
 
 DOSE_VOLTAGE = 3 # V
 
