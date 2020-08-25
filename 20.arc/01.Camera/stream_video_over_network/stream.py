@@ -16,7 +16,7 @@ PAGE="""\
 </head>
 <body>
 <center><h1>Raspberry Pi - Surveillance Camera</h1></center>
-<center><img src="stream.mjpg" width="640" height="480"></center>
+<center><img src="stream.mjpg" width="2592" height="1944"></center>
 </body>
 </html>
 """
@@ -85,6 +85,7 @@ with picamera.PiCamera(framerate=24) as camera:
     output = StreamingOutput()
     #Uncomment the next line to change your Pi's Camera rotation (in degrees)
     #camera.rotation = 90
+    camera.resolution = (2592,1944)
     camera.exposure_mode = 'auto'
     camera.meter_mode = 'average'
     camera.awb_mode = 'auto'
