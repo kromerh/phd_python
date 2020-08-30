@@ -16,11 +16,13 @@ FREQUENCY = 1 # sleep time in second
 
 
 # values to save
-VOLTAGE_IS = 2 # V
+VOLTAGE_IS_1 = 1 # V
+VOLTAGE_IS_2 = 3 # V
 VOLTAGE_VC = 0 # V
 
 VERBOSE = True
 
+ALTERNATE_FREQ = 10 # how many seconds to switch from one value to the next
 
 # read password and user to database
 
@@ -55,9 +57,21 @@ def saveDB(experiment_id, voltage_IS, voltage_VC, verbose=False):
 
     if verbose: print(query)
 
+cnt = 0
+VOLTAGE_IS = VOLTAGE_IS_1
 
+alternate = True
 while True:
     try:
+        if cnt == ALTERNATE_FREQ:
+            cnt = 0
+            if alternate:
+                VOLTAGE_IS = VOLTAGE_IS_2
+                alternate = False
+            else:
+                VOLTAGE_IS = VOLTAGE_IS_1
+                alternate = True
+
         experiment_id = get_experiment_id(sql_engine, VERBOSE)
 
         voltage_IS = float(VOLTAGE_IS)
@@ -66,6 +80,7 @@ while True:
         saveDB(experiment_id, voltage_IS, voltage_VC, VERBOSE)
 
         sleep(FREQUENCY)
+        cnt += 1
     except KeyboardInterrupt:
         print('Ctrl + C. Exiting. Flushing serial connection.')
         sys.exit(1)

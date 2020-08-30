@@ -19,10 +19,17 @@ FREQUENCY = 1 # sleep time in second
 
 
 # values to save
-HV_VOLTAGE = 3.2 # V
-HV_CURRENT = 0.9 # V
+HV_VOLTAGE_1 = 1.2 # V
+HV_VOLTAGE_2 = 3.2 # V
 
-DOSE_VOLTAGE = 3 # V
+HV_CURRENT_1 = 0.1 # V
+HV_CURRENT_2 = 0.9 # V
+
+DOSE_VOLTAGE_1 = 1 # V
+DOSE_VOLTAGE_2 = 1.9 # V
+
+
+ALTERNATE_FREQ = 30 # how many seconds to switch from one value to the next
 
 VERBOSE = True
 
@@ -81,8 +88,26 @@ interp_HV_current = interp1d(df_HV_I_LT['Current_read'], df_HV_I_LT['HV_current'
 
 # readout of the arduino
 # pi_flush(arduinoPort)
+cnt = 0
+HV_VOLTAGE = HV_VOLTAGE_2
+HV_CURRENT = HV_CURRENT_2
+DOSE_VOLTAGE = DOSE_VOLTAGE_2
+alternate = True
 while True:
     try:
+        if cnt == ALTERNATE_FREQ:
+            cnt = 0
+            if alternate:
+                HV_VOLTAGE = HV_VOLTAGE_1
+                HV_CURRENT = HV_CURRENT_1
+                DOSE_VOLTAGE = DOSE_VOLTAGE_1
+                alternate = False
+            else:
+                HV_VOLTAGE = HV_VOLTAGE_2
+                HV_CURRENT = HV_CURRENT_2
+                DOSE_VOLTAGE = DOSE_VOLTAGE_2
+                alternate = True
+
         experiment_id = get_experiment_id(sql_engine, VERBOSE)
         dose_voltage = float(DOSE_VOLTAGE)
         HV_current = float(HV_CURRENT)  # 0 - 2 mA
@@ -92,6 +117,7 @@ while True:
         saveDB(experiment_id, dose_voltage, HV_current, HV_voltage, VERBOSE)
 
         sleep(FREQUENCY)
+        cnt += 1
     except KeyboardInterrupt:
         print('Ctrl + C. Exiting. Flushing serial connection.')
         sys.exit(1)
