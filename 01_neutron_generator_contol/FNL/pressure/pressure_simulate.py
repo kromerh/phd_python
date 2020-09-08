@@ -29,10 +29,8 @@ ALTERNATE_FREQ = 10 # how many seconds to switch from one value to the next
 credentials = pd.read_csv(PATH_CREDENTIALS, header=0)
 user = credentials['username'].values[0]
 pw = credentials['password'].values[0]
-host="localhost"  # your host
-user=user # username
-passwd=pw  # password
-db="FNL" # name of the database
+host = str(credentials['hostname'].values[0])
+db = str(credentials['db'].values[0])
 connect_string = 'mysql+pymysql://%(user)s:%(pw)s@%(host)s:3306/%(db)s'% {"user": user, "pw": pw, "host": host, "db": db}
 sql_engine = sql.create_engine(connect_string)
 
@@ -57,32 +55,34 @@ def saveDB(experiment_id, voltage_IS, voltage_VC, verbose=False):
 
     if verbose: print(query)
 
-cnt = 0
-VOLTAGE_IS = VOLTAGE_IS_1
+def simulate(FREQUENCY=1, VOLTAGE_IS_1=1, VOLTAGE_IS_2=3, VOLTAGE_VC=0, ALTERNATE_FREQ=30, VERBOSE=False):
+    cnt = 0
+    VOLTAGE_IS = VOLTAGE_IS_1
 
-alternate = True
-while True:
-    try:
-        if cnt == ALTERNATE_FREQ:
-            cnt = 0
-            if alternate:
-                VOLTAGE_IS = VOLTAGE_IS_2
-                alternate = False
-            else:
-                VOLTAGE_IS = VOLTAGE_IS_1
-                alternate = True
+    alternate = True
+    while True:
+        try:
+            if cnt == ALTERNATE_FREQ:
+                cnt = 0
+                if alternate:
+                    VOLTAGE_IS = VOLTAGE_IS_2
+                    alternate = False
+                else:
+                    VOLTAGE_IS = VOLTAGE_IS_1
+                    alternate = True
 
-        experiment_id = get_experiment_id(sql_engine, VERBOSE)
+            experiment_id = get_experiment_id(sql_engine, VERBOSE)
 
-        voltage_IS = float(VOLTAGE_IS)
-        voltage_VC = float(VOLTAGE_VC)
+            voltage_IS = float(VOLTAGE_IS)
+            voltage_VC = float(VOLTAGE_VC)
 
-        saveDB(experiment_id, voltage_IS, voltage_VC, VERBOSE)
+            saveDB(experiment_id, voltage_IS, voltage_VC, VERBOSE)
 
-        sleep(FREQUENCY)
-        cnt += 1
-    except KeyboardInterrupt:
-        print('Ctrl + C. Exiting. Flushing serial connection.')
-        sys.exit(1)
+            sleep(FREQUENCY)
+            cnt += 1
+        except KeyboardInterrupt:
+            print('Ctrl + C. Exiting. Flushing serial connection.')
+            sys.exit(1)
 
 
+simulate()
