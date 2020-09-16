@@ -34,6 +34,7 @@ class NGDataObject():
         df['time'] = pd.to_datetime(df['time'])
         # set index as time
         df.set_index('time', drop=True, inplace=True)
+
         return df
 
 

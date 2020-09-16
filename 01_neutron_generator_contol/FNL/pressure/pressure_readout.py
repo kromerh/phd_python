@@ -2,7 +2,7 @@ import serial
 import serial.tools.list_ports
 import re
 import sys
-import pymysql
+# import pymysql
 from time import sleep
 import pandas as pd
 import numpy as np
@@ -16,8 +16,6 @@ import getopt
 PATH_CREDENTIALS = r'../../credentials.pw'
 ARDUINO_PORT = '/dev/ttyACM0'
 VERBOSE = True
-
-
 
 
 # connect to database
@@ -36,7 +34,7 @@ serialArduino = serial.Serial(port=ARDUINO_PORT, baudrate=9600)
 
 
 def get_experiment_id(sql_engine, verbose=False):
-    query = f"SELECT experiment_id FROM experiment_control;"
+    query = "SELECT experiment_id FROM experiment_control;"
     df = pd.read_sql(query, sql_engine)
 
     experiment_id = df['experiment_id'].values[0]

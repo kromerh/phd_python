@@ -1,0 +1,26 @@
+These are the parts ordered from Pololu which I used:
+
+ #2676 Pololu 25D mm Metal Gearmotor Bracket Pair = 7.45
+ #2672 Pololu Aluminum Scooter Wheel Adapter for 4mm Shaft = 9.90
+ #3272 Scooter/Skate Wheel 70×25mm - Black = 4.98
+ #3258 378:1 Metal Gearmotor 25Dx58L mm LP 12V = 19.95
+ #1363 High-Power Simple Motor Controller G2 18v15 = 39.95
+
+
+
+ You will receive one piece with four bolts as "legs" and an improvised piece of wood connected on the bottom for just a little rigidity. Besides software and so forth, you will need to do all the connectors we talked about from alu profile. I would suggest you check everything physically yourself before ordering to make sure lengths and quantities are OKAY, but it should be roughly as follows:
+
+5x ~500 mm 40x80 (one per 45 deg, on bottom for rigidity)
+6x ~120 mm 40x80 (for connecting two 45 deg pieces together)
+6x 40x40 profile of length L (roughly 800 mm or so ???) so that total height of top of trolley is about 1000 mm (so that detector can sit roughly 20 cm above to match emitting spot at 120 cm)
+....L will need take into account thickness of the base table and trolley, and adjustable heightwhere L = 1000 mm minus the height of the adjustable foot
+also 6x adjustable feet and 6x ways to connect that to the 120mm 40x80
+50x M4 t-slot nuts?
+50x correct length M4 screws (~15 mm ??)
+for connnectors between each 45 deg... M8 slots and screws? (c. 24 each)
+
+As we talked about, either you borrow the physical credit card from ETH to order the stuff at PSI Lager, or you pay yourself and request reimbursement, up to you. It should go to the seed grant.
+
+I will try to ship it in the next day or two, I'll let you know when I manage that (I need to organize a box and some packing materal, and the DHL pick-up).
+
+Many thanks for your support! I'm exciting to see V2.0 fully in action! (and I guess Micha is also)
